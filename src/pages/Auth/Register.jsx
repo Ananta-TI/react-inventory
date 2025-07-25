@@ -46,7 +46,7 @@ const handleRegister = async (e) => {
         onSubmit={handleRegister}
         className="bg-white rounded-xl p-8 shadow-xl w-full max-w-md"
       >
-        <h2 className="text-2xl font-bold text-center mb-6">Register Account</h2>
+        <h2 className="text-2xl font-bold text-orange-500 text-center mb-6">Register Account</h2>
 
         {error && (
           <div className="text-red-500 mb-4 text-sm bg-red-100 p-2 rounded flex items-center">
@@ -68,7 +68,7 @@ const handleRegister = async (e) => {
           value={formData.email}
           onChange={handleChange}
           placeholder="Email"
-          className="w-full px-4 py-2 border rounded mb-4 bg-gray-50"
+          className="w-full px-4 py-2 border rounded mb-4 text-gray-400 border-none bg-gray-50"
           required
         />
         <input
@@ -77,14 +77,14 @@ const handleRegister = async (e) => {
           value={formData.password}
           onChange={handleChange}
           placeholder="Password"
-          className="w-full px-4 py-2 border rounded mb-4 bg-gray-50"
+          className="w-full px-4 py-2 border rounded mb-4 text-gray-400 border-none bg-gray-50"
           required
         />
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-105 text-white py-2 rounded transition"
+          className="w-full bg-gradient-to-r from-orange-500 to-blue-500 hover:scale-105 text-white py-2 rounded transition"
         >
           {loading ? 'Registering...' : 'Register'}
         </button>

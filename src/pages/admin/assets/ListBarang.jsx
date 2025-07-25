@@ -148,7 +148,7 @@ export default function ListBarang() {
                   <td className="px-6 py-4 space-x-2">
                     <Link
                       to={`/admin/assets/edit/${item.id}`}
-                      className="text-blue-600 hover:underline text-sm"
+                      className="text-blue-600 bg-blue-300 py-1 px-4 hover:underline rounded-full font-bold text-sm"
                     >
                       Edit
                     </Link>
@@ -157,7 +157,7 @@ export default function ListBarang() {
                         setSelectedItem(item);
                         setShowModal(true);
                       }}
-                      className="text-red-600 hover:underline text-sm"
+                      className="text-red-600 bg-red-200 py-1 px-2 rounded-full hover:underline font-bold text-sm"
                     >
                       Hapus
                     </button>
@@ -219,10 +219,11 @@ export default function ListBarang() {
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setShowModal(false)}
-                className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+                className="px-4 py-2 bg-gray-200 rounded  hover:bg-gray-300"
               >
                 Batal
               </button>
+
               <button
                 onClick={handleDelete}
                 className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"

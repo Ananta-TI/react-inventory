@@ -98,13 +98,13 @@ export default function Kategori() {
                   <td className="px-6 py-4 space-x-3">
                     <Link
                       to={`/admin/kategori/edit/${item.id_kategori}`}
-                      className="text-yellow-600 hover:underline text-sm"
+                      className="text-yellow-600 bg-yellow-100 px-3 py-1 rounded-2xl hover:underline text-sm"
                     >
                       Edit
                     </Link>
                     <button
                       onClick={() => handleDelete(item.id_kategori)}
-                      className="text-red-600 hover:underline text-sm"
+                      className="text-red-600 hover:underline bg-red-100 px-3 py-1 rounded-2xl text-sm"
                     >
                       Hapus
                     </button>

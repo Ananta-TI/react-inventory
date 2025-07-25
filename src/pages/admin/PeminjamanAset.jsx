@@ -139,13 +139,13 @@ export default function PeminjamanAsetAdmin() {
                     <>
                       <button
                         onClick={() => updateStatus(item.id, "disetujui")}
-                        className="text-green-600 hover:underline text-sm"
+                        className="text-green-600 bg-green-100 px-3 py-1 rounded-2xl hover:underline text-sm"
                       >
                         Setujui
                       </button>
                       <button
                         onClick={() => updateStatus(item.id, "ditolak")}
-                        className="text-red-600 hover:underline text-sm"
+                        className="text-red-600 bg-red-100 px-3 py-1 rounded-2xl hover:underline text-sm"
                       >
                         Tolak
                       </button>
@@ -155,7 +155,7 @@ export default function PeminjamanAsetAdmin() {
                     item.status === "pengembalian") && (
                     <button
                       onClick={() => updateStatus(item.id, "dikembalikan")}
-                      className="text-blue-600 hover:underline text-sm"
+                      className="text-blue-600 bg-blue-100 px-3 py-1 rounded-2xl hover:underline text-sm"
                     >
                       {item.status === "pengembalian"
                         ? "Konfirmasi Pengembalian"
@@ -163,7 +163,7 @@ export default function PeminjamanAsetAdmin() {
                     </button>
                   )}
                   {item.status === "dikembalikan" && (
-                    <span className="text-green-600 text-sm font-medium">
+                    <span className="text-blue-600 bg-blue-100 px-3 py-1 rounded-2xl text-sm font-medium">
                       Selesai
                     </span>
                   )}

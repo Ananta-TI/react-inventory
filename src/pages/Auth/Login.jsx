@@ -94,7 +94,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-blue-700 text-center">Login</h2>
         {error && (
           <div className="bg-red-100 text-red-700 px-4 py-2 rounded mb-4 flex items-center gap-2">
             <BsFillExclamationDiamondFill /> {error}
@@ -102,7 +102,7 @@ export default function Login() {
         )}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
-            <FaEnvelope className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
+            <FaEnvelope className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
             <input
               type="email"
               name="email"
@@ -110,11 +110,11 @@ export default function Login() {
               onChange={handleChange}
               placeholder="Email"
               required
-              className="w-full pl-10 pr-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-10 pr-4 py-2  text-gray-500 rounded focus:outline-none bg-gray-100 border-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="relative">
-            <FaLock className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" />
+            <FaLock className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
             <input
               type="password"
               name="password"
@@ -122,13 +122,13 @@ export default function Login() {
               onChange={handleChange}
               placeholder="Password"
               required
-              className="w-full pl-10 pr-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-10 pr-4 py-2  rounded text-gray-500 focus:outline-none focus:ring-2  bg-gray-100 border-none focus:ring-blue-500"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded flex justify-center items-center"
+            className="w-full bg-gradient-to-r from-orange-500 to-blue-500 hover:bg-blue-700 text-white py-2 rounded flex justify-center items-center"
           >
             {loading ? (
               <>
@@ -139,7 +139,7 @@ export default function Login() {
             )}
           </button>
         </form>
-        <p className="mt-4 text-center text-sm">
+        <p className="mt-4 text-center text-black text-sm">
           Belum punya akun?{' '}
           <Link to="/register" className="text-blue-600 hover:underline">
             Daftar di sini
